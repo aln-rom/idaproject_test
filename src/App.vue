@@ -1,26 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Catalog/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Catalog from '@/views/Catalog'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Catalog
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import 'assets/styles/variables.scss';
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: normal;
+  background: $background-gray;
+  margin: 0;
+  padding: 0;
 }
 </style>
