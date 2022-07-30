@@ -1,8 +1,8 @@
 <template>
   <div class="product-card">
-    <div class="product-card__delete">
+    <button class="product-card__delete">
       <img src="../assets/images/basket.png">
-    </div>
+    </button>
     <div class="product-card__img"></div>
     <div class="product-card__txt">
       <div class="product-card__txt__ttl">{{product.name}}</div>
@@ -53,14 +53,24 @@ export default {
     top: -10px;
     float: right;
     display: none;
+    cursor: pointer;
+    border: none;
     -webkit-transition: 0.2s ease-in-out;
     -moz-transition: 0.2s ease-in-out;
     -o-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
+
+    &:hover {
+      background: #F57979;
+    }
+
+    &:active, &:focus {
+      background: #F56767;
+    }
+
     > img {
       width: 16px;
       height: 16px;
-      margin: 8px;
     }
   }
 
