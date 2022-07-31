@@ -44,7 +44,7 @@ export default {
     },
 
     showSelectorOptions() {
-        this.open = !this.open;
+      this.open = !this.open;
     },
   },
 };
@@ -57,12 +57,15 @@ export default {
 
     <div
         class="app-radio-select__item"
-        :class="[
-        { 'app-radio-select__item_opened': open },
-      ]"
         @click="showSelectorOptions"
     >
       <p v-if="selectedOption">{{ selectedOption.name }}</p>
+      <div
+          :class="[ 'app-radio-select__item__img',
+        { 'app-radio-select__item__img_opened': open },
+      ]">
+        <img src="../../assets/images/open_sign.svg">
+      </div>
     </div>
 
     <div
@@ -94,12 +97,12 @@ export default {
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  width: 100%;
+  width: auto;
 
   &__item {
     position: relative;
     padding: 10px 0 10px 16px;
-    height: 36px;
+    height: 26px;
     width: 100%;
     transition: background-color 0.2s ease;
     cursor: pointer;
@@ -114,14 +117,31 @@ export default {
     line-height: 15px;
     color: #B4B4B4;
 
+    > p {
+      width: 80%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
 
     &:hover {
       background: #FAFAFA;
     }
 
-    &_opened {
-      &:after {
+    &__img {
+      width: 4.59px;
+      height: 4.59px;
+      display: inline-block;
+      top: -4px;
+      left: 0;
+      position: relative;
+
+      &_opened {
         transform: rotate(180deg);
+        top: 6px;
+        left: 3px;
+        position: relative;
       }
     }
   }
