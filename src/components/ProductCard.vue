@@ -1,6 +1,6 @@
 <template>
   <div class="product-card">
-    <button class="product-card__delete">
+    <button class="product-card__delete" @click="$emit('deleteProduct')">
       <img src="../assets/images/basket.png">
     </button>
     <div class="product-card__img"></div>
@@ -14,6 +14,7 @@
 
 <script>
 export default {
+  emits: ["deleteProduct"],
   name: 'ProductCard',
   props: ['product'],
 }
