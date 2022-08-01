@@ -31,9 +31,7 @@ export default {
   @include shadow;
 
   &__wrapper {
-    margin: 24px 32px;
-    display: grid;
-    padding: 0 32px 0 0;
+    padding: 24px;
   }
 }
 </style>

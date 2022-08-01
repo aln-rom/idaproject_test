@@ -106,6 +106,7 @@ export default {
 
   &__input {
     width: 100%;
+    position: relative;
     height: 36px;
     color: #3F3F3F;
     background: $background-white;
@@ -114,6 +115,7 @@ export default {
     font-size: 12px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     line-height: 140%;
+    box-sizing: border-box;
     padding: 0 16px;
 
     &:hover {
