@@ -1,9 +1,11 @@
 <template>
   <div class="product-card">
     <button class="product-card__delete" @click="$emit('deleteProduct')">
-      <img src="../assets/images/basket.png">
+      <img src="@/assets/images/basket.png">
     </button>
-    <div class="product-card__img"></div>
+    <div class="product-card__img">
+      <img :src="product.imgUrl">
+    </div>
     <div class="product-card__txt">
       <div class="product-card__txt__ttl">{{product.name}}</div>
       <div class="product-card__txt__description">{{product.description}}</div>
@@ -49,8 +51,9 @@ export default {
     border-radius: 10px;
     width: 32px;
     height: 32px;
-    position: relative;
-    left: 16px;
+    position: absolute;
+    z-index: 20;
+    right: -16px;
     top: -10px;
     float: right;
     display: none;
@@ -77,12 +80,14 @@ export default {
 
   &__img {
     top: 0;
-    background-image: url("../assets/images/polaroid.jpeg");
-    background-size: cover;
-    background-position: bottom;
     border-radius: 4px 4px 0 0;
-    width: 100%;
-    height: 200px;
+
+    > img {
+      top: 0;
+      width: 100%;
+      height: 200px;
+      position: relative;
+    }
   }
 
   &__txt {
