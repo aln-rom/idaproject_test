@@ -1,83 +1,3 @@
-<template>
-  <div class="catalog">
-    <div class="catalog__title-wrapper">
-      <div class="catalog__title-wrapper__ttl">Добавление товара</div>
-      <app-select
-          class="catalog__title-wrapper__select"
-          v-model:selectedOption="selectedOption"
-          :options="filterOptions"
-      />
-    </div>
-
-    <div class="catalog__main-wrapper">
-      <app-form class="catalog__main-wrapper__form" @submitForm="addProduct" >
-
-        <app-input
-            v-model.trim="product.name"
-            label="Наименование товара"
-            type="text"
-            :required="true"
-            :error="inputError"
-            placeholder="Введите наименование товара"
-        />
-
-        <app-input
-            v-model.trim="product.imgUrl"
-            label="Ссылка на изображение товара"
-            type="text"
-            :required="true"
-            :error="inputError"
-            placeholder="Введите ссылку"
-        />
-
-        <app-textarea
-            v-model="product.description"
-            label="Описание товара"
-            placeholder="Введите описание товара"
-        />
-
-        <app-input
-            v-model.trim="product.price"
-            label="Цена товара"
-            type="number"
-            :required="true"
-            :error="inputError"
-            placeholder="Введите цену"
-            @focus="indicatorChange = true"
-            @blur="indicatorChange = false"
-        />
-
-        <app-button
-            type="submit"
-            :disabled="disabled"
-        >
-          Добавить товар
-        </app-button>
-      </app-form>
-    <div class="catalog__main-wrapper__cards">
-      <div v-for="(product, index) in products"
-           :key="index"
-           class="catalog__main-wrapper__cards__product"
-      >
-        <product-card
-            :product="product"
-            @deleteProduct="deleteProduct(index)"
-        />
-      </div>
-        <div v-for="(product, index) in newProducts"
-             :key="index"
-             class="catalog__main-wrapper__cards__product"
-        >
-          <product-card
-              :product="product"
-              @deleteProduct="removeLSProduct(index)"
-          />
-      </div>
-    </div>
-    </div>
-  </div>
-</template>
-
 <script>
 import ProductCard from "@/components/ProductCard";
 import AppSelect from "@/components/ui/AppSelect";
@@ -210,6 +130,86 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div class="catalog">
+    <div class="catalog__title-wrapper">
+      <div class="catalog__title-wrapper__ttl">Добавление товара</div>
+      <app-select
+          class="catalog__title-wrapper__select"
+          v-model:selectedOption="selectedOption"
+          :options="filterOptions"
+      />
+    </div>
+
+    <div class="catalog__main-wrapper">
+      <app-form class="catalog__main-wrapper__form" @submitForm="addProduct" >
+
+        <app-input
+            v-model.trim="product.name"
+            label="Наименование товара"
+            type="text"
+            :required="true"
+            :error="inputError"
+            placeholder="Введите наименование товара"
+        />
+
+        <app-input
+            v-model.trim="product.imgUrl"
+            label="Ссылка на изображение товара"
+            type="text"
+            :required="true"
+            :error="inputError"
+            placeholder="Введите ссылку"
+        />
+
+        <app-textarea
+            v-model="product.description"
+            label="Описание товара"
+            placeholder="Введите описание товара"
+        />
+
+        <app-input
+            v-model.trim="product.price"
+            label="Цена товара"
+            type="number"
+            :required="true"
+            :error="inputError"
+            placeholder="Введите цену"
+            @focus="indicatorChange = true"
+            @blur="indicatorChange = false"
+        />
+
+        <app-button
+            type="submit"
+            :disabled="disabled"
+        >
+          Добавить товар
+        </app-button>
+      </app-form>
+    <div class="catalog__main-wrapper__cards">
+      <div v-for="(product, index) in products"
+           :key="index"
+           class="catalog__main-wrapper__cards__product"
+      >
+        <product-card
+            :product="product"
+            @deleteProduct="deleteProduct(index)"
+        />
+      </div>
+        <div v-for="(product, index) in newProducts"
+             :key="index"
+             class="catalog__main-wrapper__cards__product"
+        >
+          <product-card
+              :product="product"
+              @deleteProduct="removeLSProduct(index)"
+          />
+      </div>
+    </div>
+    </div>
+  </div>
+</template>
 
 <style scoped lang="scss">
 .catalog {

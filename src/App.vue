@@ -1,7 +1,3 @@
-<template>
-  <Catalog/>
-</template>
-
 <script>
 import Catalog from '@/views/Catalog'
 
@@ -12,6 +8,10 @@ export default {
   }
 }
 </script>
+
+<template>
+  <Catalog/>
+</template>
 
 <style lang="scss">
 @import 'assets/styles/variables.scss';

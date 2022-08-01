@@ -1,5 +1,12 @@
+<script>
+export default {
+  emits: ["deleteProduct"],
+  name: 'ProductCard',
+  props: ['product'],
+}
+</script>
+
 <template>
-  <transition name="list">
   <div class="product-card">
     <button class="product-card__delete" @click="$emit('deleteProduct')">
       <img src="@/assets/images/basket.png">
@@ -13,31 +20,10 @@
       <div class="product-card__txt__price">{{product.price.toLocaleString('ru')}} руб.</div>
     </div>
   </div>
-  </transition>
 </template>
-
-<script>
-export default {
-  emits: ["deleteProduct"],
-  name: 'ProductCard',
-  props: ['product'],
-}
-</script>
 
 <style scoped lang="scss">
 @import '../assets/styles/variables.scss';
-.list-item {
-  display: inline-block;
-  margin-right: 10px;
-}
-.list-enter-active, .list-leave-active {
-  transition: all 1s;
-}
-.list-enter, .list-leave-to /* .list-leave-active до версии 2.1.8 */ {
-  opacity: 0;
-  transform: translateY(30px);
-}
-
 
 .product-card {
   width: 100%;

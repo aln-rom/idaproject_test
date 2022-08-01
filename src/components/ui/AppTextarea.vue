@@ -87,6 +87,7 @@ export default {
 
   &__textarea {
     padding: 10px 16px;
+    font-family: 'Source Sans Pro', sans-serif;
     width: 100%;
     height: 108px;
     color: #3F3F3F;
