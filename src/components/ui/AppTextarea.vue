@@ -54,6 +54,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/styles/variables.scss';
 .app-textarea {
   width: 100%;
 
@@ -64,7 +65,7 @@ export default {
     font-size: 12px;
     line-height: 15px;
     text-align: left;
-    color: #B4B4B4;
+    color: $gray-500;
   }
 
   &__label {
@@ -80,7 +81,7 @@ export default {
       font-size: 10px;
       line-height: 13px;
       letter-spacing: -0.02em;
-      color: #49485E;
+      color: $label-dark;
     }
   }
 
@@ -89,7 +90,7 @@ export default {
     width: 100%;
     height: 108px;
     color: #3F3F3F;
-    background: #FFFEFB;
+    background: $background-white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     border: none;
@@ -99,13 +100,13 @@ export default {
     margin: 0;
 
     &:hover {
-      background: #FAFAFA;
+      background: $background-tertiary;
     }
 
     &:active,
     &:focus {
       outline: none;
-      box-shadow: 0 0 0 1px #7BAE73;
+      box-shadow: 0 0 0 1px $main-green;
     }
   }
 }

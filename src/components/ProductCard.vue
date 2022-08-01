@@ -1,4 +1,5 @@
 <template>
+  <transition name="list">
   <div class="product-card">
     <button class="product-card__delete" @click="$emit('deleteProduct')">
       <img src="@/assets/images/basket.png">
@@ -12,6 +13,7 @@
       <div class="product-card__txt__price">{{product.price.toLocaleString('ru')}} руб.</div>
     </div>
   </div>
+  </transition>
 </template>
 
 <script>
@@ -24,10 +26,22 @@ export default {
 
 <style scoped lang="scss">
 @import '../assets/styles/variables.scss';
+.list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-enter-active, .list-leave-active {
+  transition: all 1s;
+}
+.list-enter, .list-leave-to /* .list-leave-active до версии 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+
 .product-card {
   width: 100%;
   background: $background-white;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.04), 0 6px 10px rgba(0, 0, 0, 0.02);
   border-radius: 4px;
   color: $label-primary;
   cursor: pointer;
@@ -35,6 +49,7 @@ export default {
   -moz-transition: 0.2s ease-in-out;
   -o-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
+  @include shadow;
 
   &:hover {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1), 0 20px 20px rgba(0, 0, 0, 0.1);
@@ -46,7 +61,7 @@ export default {
   }
 
   &__delete {
-    background: #FF8484;
+    background: $error;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     width: 32px;

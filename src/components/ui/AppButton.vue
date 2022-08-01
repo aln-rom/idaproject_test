@@ -28,31 +28,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/styles/variables.scss';
 .app-button {
   border: none;
   cursor: pointer;
   left: 0;
   border-radius: 10px;
-  background: #7BAE73;
+  background: $main-green;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: 36px;
   font-weight: 600;
   font-size: 12px;
   line-height: 15px;
-  color: #FFFFFF;
+  color: $background-white;
 
   &:hover,
   :focus {
-    background: #A0D17A;
+    background: $light-green;
   }
 
   &:active {
-    background: #87A96C;
+    background: $dark-green;
   }
 
   &:disabled {
     background: #EEEEEE;
-    color: #B4B4B4;
+    color: $gray-500;
     cursor: not-allowed;
   }
 }

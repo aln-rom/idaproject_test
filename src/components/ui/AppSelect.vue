@@ -108,14 +108,14 @@ export default {
     cursor: pointer;
     display: flex;
     align-items: center;
-    background: #FFFEFB;
+    background: $background-white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
-    color: #B4B4B4;
+    color: $gray-500;
 
     > p {
       width: 80%;
@@ -126,7 +126,7 @@ export default {
 
 
     &:hover {
-      background: #FAFAFA;
+      background: $background-tertiary;
     }
 
     &__img {

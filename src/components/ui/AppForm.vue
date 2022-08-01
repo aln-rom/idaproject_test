@@ -21,13 +21,14 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import '../../assets/styles/variables.scss';
 .app-form {
   padding: 24px 0;
   position: relative;
   min-width: 300px;
-  background: #FFFEFB;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.04), 0 6px 10px rgba(0, 0, 0, 0.02);
+  background: $background-white;
   border-radius: 4px;
+  @include shadow;
 
   &__wrapper {
     margin: 24px 32px;

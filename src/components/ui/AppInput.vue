@@ -41,6 +41,9 @@ export default {
       showPass: false,
     };
   },
+
+  computed: {
+  },
 };
 </script>
 
@@ -64,6 +67,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import '../../assets/styles/variables.scss';
 .app-input {
   align-items: flex-start;
   position: relative;
@@ -74,7 +78,7 @@ export default {
   ::placeholder {
     font-family: 'Source Sans Pro', sans-serif;
     font-style: normal;
-    color: #B4B4B4;
+    color: $gray-500;
     font-weight: normal;
   }
 
@@ -86,13 +90,13 @@ export default {
     font-size: 10px;
     line-height: 13px;
     letter-spacing: -0.02em;
-    color: #49485E;
+    color: $label-dark;
 
 
     &__required {
       width: 4px;
       height: 4px;
-      background: #FF8484;
+      background: $error;
       border-radius: 4px;
       display: inline-block;
       position: relative;
@@ -104,7 +108,7 @@ export default {
     width: 100%;
     height: 36px;
     color: #3F3F3F;
-    background: #FFFEFB;
+    background: $background-white;
     border-radius: 4px;
     border: none;
     font-size: 12px;
@@ -113,22 +117,22 @@ export default {
     padding: 0 16px;
 
     &:hover {
-      background: #FAFAFA;
+      background: $background-tertiary;
     }
 
     &:active,
     &:focus {
       outline: none;
-      box-shadow: 0 0 0 1px #7BAE73;
+      box-shadow: 0 0 0 1px $main-green;
     }
 
     &_error {
-      box-shadow: 0 0 0 1px #FF8484 !important;
+      box-shadow: 0 0 0 1px $error !important;
     }
   }
 
   &__error {
-    color: #FF8484;
+    color: $error;
   }
 }
 </style>

@@ -22,7 +22,7 @@
         />
 
         <app-input
-            v-model.trim="product.imageUrl"
+            v-model.trim="product.imgUrl"
             label="Ссылка на изображение товара"
             type="text"
             :required="true"
@@ -102,7 +102,7 @@ export default {
 
       product: {
         name: "",
-        imageUrl: "",
+        imgUrl: "",
         description: "",
         price: "",
       },
@@ -132,53 +132,41 @@ export default {
         {
           name: 'Наименование товара',
           description: 'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк',
-          price: 10000,
+          price: 13000,
           imgUrl: 'https://s3-alpha-sig.figma.com/img/488b/7f1f/e88ef4c6003a678c0c9d6a1b91606ae9?Expires=1660521600&Signature=EhrntMh6S41ITaYctGwPMALpG5KxuXsmUy~5qKBblHEtbpCybT2-HATX73Kl02jhljT3t5ObPZiBXW8LxAnszv5E0oSHHqBp1bmLlJKtuOEsAmpcHR25nGPLK0IWh-K3tB7h-G2u72IxgSqcg5V2fj6z2W3G-7G0jcq7p5kFOT7xYQjaG3obrAG77KZRHwhd2nVhbDxQDeCLh04rz9~TjjoVFQR4uA3UnJH6O-3X8CZm2VnpmDddqwZZQ2b9ySuzdguK8Vq5XhyLdNLQJM0uHbVmijhneeQ1G5OSGiTaxWIiIcS3WABl-KdC-AHRWNXvq1unSWfF8kdBpFVYp0I5cQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
         },
         {
           name: 'Наименование товара',
           description: 'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк',
-          price: 10000,
+          price: 43000,
           imgUrl: 'https://s3-alpha-sig.figma.com/img/488b/7f1f/e88ef4c6003a678c0c9d6a1b91606ae9?Expires=1660521600&Signature=EhrntMh6S41ITaYctGwPMALpG5KxuXsmUy~5qKBblHEtbpCybT2-HATX73Kl02jhljT3t5ObPZiBXW8LxAnszv5E0oSHHqBp1bmLlJKtuOEsAmpcHR25nGPLK0IWh-K3tB7h-G2u72IxgSqcg5V2fj6z2W3G-7G0jcq7p5kFOT7xYQjaG3obrAG77KZRHwhd2nVhbDxQDeCLh04rz9~TjjoVFQR4uA3UnJH6O-3X8CZm2VnpmDddqwZZQ2b9ySuzdguK8Vq5XhyLdNLQJM0uHbVmijhneeQ1G5OSGiTaxWIiIcS3WABl-KdC-AHRWNXvq1unSWfF8kdBpFVYp0I5cQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
         },
         {
           name: 'Наименование товара',
           description: 'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк',
-          price: 10000,
+          price: 6000,
           imgUrl: 'https://s3-alpha-sig.figma.com/img/488b/7f1f/e88ef4c6003a678c0c9d6a1b91606ae9?Expires=1660521600&Signature=EhrntMh6S41ITaYctGwPMALpG5KxuXsmUy~5qKBblHEtbpCybT2-HATX73Kl02jhljT3t5ObPZiBXW8LxAnszv5E0oSHHqBp1bmLlJKtuOEsAmpcHR25nGPLK0IWh-K3tB7h-G2u72IxgSqcg5V2fj6z2W3G-7G0jcq7p5kFOT7xYQjaG3obrAG77KZRHwhd2nVhbDxQDeCLh04rz9~TjjoVFQR4uA3UnJH6O-3X8CZm2VnpmDddqwZZQ2b9ySuzdguK8Vq5XhyLdNLQJM0uHbVmijhneeQ1G5OSGiTaxWIiIcS3WABl-KdC-AHRWNXvq1unSWfF8kdBpFVYp0I5cQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
         },
         {
           name: 'Наименование товара',
           description: 'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк',
-          price: 10000,
+          price: 7000,
           imgUrl: 'https://s3-alpha-sig.figma.com/img/488b/7f1f/e88ef4c6003a678c0c9d6a1b91606ae9?Expires=1660521600&Signature=EhrntMh6S41ITaYctGwPMALpG5KxuXsmUy~5qKBblHEtbpCybT2-HATX73Kl02jhljT3t5ObPZiBXW8LxAnszv5E0oSHHqBp1bmLlJKtuOEsAmpcHR25nGPLK0IWh-K3tB7h-G2u72IxgSqcg5V2fj6z2W3G-7G0jcq7p5kFOT7xYQjaG3obrAG77KZRHwhd2nVhbDxQDeCLh04rz9~TjjoVFQR4uA3UnJH6O-3X8CZm2VnpmDddqwZZQ2b9ySuzdguK8Vq5XhyLdNLQJM0uHbVmijhneeQ1G5OSGiTaxWIiIcS3WABl-KdC-AHRWNXvq1unSWfF8kdBpFVYp0I5cQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
         },
         {
           name: 'Наименование товара',
           description: 'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк',
-          price: 10000,
+          price: 1930,
           imgUrl: 'https://s3-alpha-sig.figma.com/img/488b/7f1f/e88ef4c6003a678c0c9d6a1b91606ae9?Expires=1660521600&Signature=EhrntMh6S41ITaYctGwPMALpG5KxuXsmUy~5qKBblHEtbpCybT2-HATX73Kl02jhljT3t5ObPZiBXW8LxAnszv5E0oSHHqBp1bmLlJKtuOEsAmpcHR25nGPLK0IWh-K3tB7h-G2u72IxgSqcg5V2fj6z2W3G-7G0jcq7p5kFOT7xYQjaG3obrAG77KZRHwhd2nVhbDxQDeCLh04rz9~TjjoVFQR4uA3UnJH6O-3X8CZm2VnpmDddqwZZQ2b9ySuzdguK8Vq5XhyLdNLQJM0uHbVmijhneeQ1G5OSGiTaxWIiIcS3WABl-KdC-AHRWNXvq1unSWfF8kdBpFVYp0I5cQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
         },
       ]
     }
   },
 
-  computed: {
-    modelNumber: {
-      get() {
-        return this.indicatorChange ? this.product.price : this.product.price.toLocaleString()
-      },
-      set(value) {
-        this.product.price = +value.replace(/\s/g, "")
-        this.$emit('input', this.product.price)
-      },
-    },
-  },
-
   watch: {
     product : {
       handler() {
-        this.product.name.length > 0 && this.product.imageUrl.length > 0 && this.product.price.length > 0 ? this.disabled = false : this.disabled = true;
+        this.product.name.length > 0 && this.product.imgUrl.length > 0 && this.product.price.length > 0 ? this.disabled = false : this.disabled = true;
       },
       deep: true
     },
@@ -196,9 +184,9 @@ export default {
 
   methods: {
     deleteProduct(index) {
-      console.log(index)
       this.products.splice(index, 1);
     },
+
 
     addProduct() {
       let newProduct = Object.assign({}, this.product);
@@ -207,7 +195,7 @@ export default {
       this.product.name = ""
       this.product.description = ""
       this.product.price = ""
-      this.product.imageUrl = ""
+      this.product.imgUrl = ""
     },
 
     removeLSProduct(index) {
@@ -224,12 +212,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
 .catalog {
   max-width: 1440px;
   padding: 20px;
   margin: 0 auto;
-  display: grid;
   grid-template-rows: 100px;
   column-gap: 20px;
 
@@ -237,6 +223,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 16px 0;
 
     &__ttl {
       font-weight: 600;
@@ -255,12 +242,26 @@ export default {
     grid-template-columns: repeat(2, auto);
     gap: 0 8px;
 
+    @media (max-width: 900px) {
+      display: block;
+      align-items: center;
+    }
+
     &__form {
       width: 332px;
       max-height: 440px;
       display: inline-block;
       position: sticky;
       top: 24px;
+
+      @media (max-width: 900px) {
+        position: relative;
+        margin-bottom: 36px;
+      }
+
+      @media (max-width: 728px) {
+        width: 330px;
+      }
 
       .app-input:not(:first-child){
         margin-top: 16px;
@@ -283,13 +284,20 @@ export default {
       display: grid;
       grid-template-columns: repeat(3, minmax(200px, 332px));
 
-      @media (max-width: 1023px) {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
+      @media (max-width: 1050px) {
+        grid-template-columns: repeat(2, minmax(200px, 332px));
+      }
+
+      @media (max-width: 728px) {
+        display: block;
+        width: 80%;
+        min-width: 330px;
       }
 
       &__product {
+        @media (max-width: 728px) {
+          margin: 16px 0;
+        }
         .product-card {
         }
       }
