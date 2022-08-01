@@ -82,7 +82,6 @@ export default {
       ]
     }
   },
-
   watch: {
     product : {
       handler() {
@@ -103,10 +102,18 @@ export default {
   },
 
   methods: {
+    isNumber(e) {
+      let regex = /[0-9]/
+
+      if(!regex.test(e.key)) {
+        e.returnValue = false
+        if(e.preventDefault) e.preventDefault();
+      }
+    },
+
     deleteProduct(index) {
       this.products.splice(index, 1);
     },
-
 
     addProduct() {
       let newProduct = Object.assign({}, this.product);
@@ -175,6 +182,7 @@ export default {
             type="number"
             :required="true"
             :error="inputError"
+            @keypress="isNumber"
             placeholder="Введите цену"
             @focus="indicatorChange = true"
             @blur="indicatorChange = false"
